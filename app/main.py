@@ -1,5 +1,10 @@
+class AnimalList(list):
+    def __repr__(self) -> str:
+        return f"[{[x for x in self]}]"
+
+
 class Animal:
-    alive: list["Animal"] = []
+    alive: AnimalList = []
 
     def __init__(
             self,
